@@ -1,0 +1,27 @@
+<html ng-app>
+<head>
+	<title>AppSec Checklist</title>
+	<script src="lib/angular.min.js"></script>
+	<script src="js/checklistCtrl.js"></script>
+</head>
+<body ng-controller="ChecklistCtrl">	
+	         
+	Search: <input ng-model="query.name">
+    Sort by: 
+	<select ng-model="orderProp">
+    	<option value="type">Type</option>
+    	<option value="name">Name</option>
+	</select>
+	<hr>
+
+    <ul class="list">
+      <li ng-repeat="item in checklist | filter:query | orderBy:orderProp">
+        <p>{{item.name}} ({{item.tasks.length}}) | {{item.type}}</p>
+        <ol>
+        	<li ng-repeat="child in item.tasks">{{child.task}}</li>
+        </ol>
+      </li>
+    </ul>
+
+</body>
+</html>
