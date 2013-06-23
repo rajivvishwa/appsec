@@ -1,0 +1,2 @@
+IP: 135.214.154.104 | PORT: 18491 | HOST:  |  Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31 | METHOD:  | REF: http://rajivvishwa.koding.com/appsec/xss/echo.php |  DATE: Wednesday 15th 2013f May 2013 10:46:20 AM | COOKIE:  cookie=SecretCookie=myPassword;%20SecretCookie2=myPassword2 
+
