@@ -5,6 +5,8 @@ header("X-XSS-Protection: 0");
 <html>
 <head><title> Execute XSS </title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  
 </head>
 <body>
   <div id="main">

