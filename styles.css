@@ -1,0 +1,192 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-size:14px;
+  color:#666;
+  background:url('client.com/img/bg.jpg') #f2f2f2;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#divContainer{
+
+  padding:12px;
+  width:550px;
+  position:relative;
+  background-color:#fcfcfc;
+  border:1px solid white;
+  color:#888;
+  margin-bottom:25px;
+   
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+
+  -moz-box-shadow:1px 1px 5px #c2c2c2;
+  -webkit-box-shadow:1px 1px 5px #c2c2c2;
+  box-shadow:1px 1px 5px #c2c2c2;
+
+}
+
+#divContainer p{
+  font-size:18px;
+  line-height:1.5;
+  overflow-x:hidden;
+}
+
+#divContainer input[type=text],
+#divContainer input[type=password],
+#divContainer textarea{
+  
+  display:block;
+  border:1px solid #ccc;
+  margin:5px 0 5px;
+  padding:3px;
+  font-size:12px;
+  color:#555;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#divContainer textarea{
+  width:300px;
+}
+
+label{
+  font-size:10px;
+}
+
+label span.error{
+  color:red;
+  position:relative;
+  right:-10px;
+}
+
+
+
+/* The styles below are only necessary for the styling of the demo page: */
+
+#main{
+  position:relative;
+  margin:0 auto;
+  width:600px;
+}
+
+.button {
+  
+  background-color:#58B9EB;
+  border:1px solid #40A2D4;
+  color:#FFFFFF;
+  cursor:pointer;
+  font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+  font-size:14px;
+  font-weight:bold;
+  padding:4px;
+  margin-top:5px;
+  text-decoration: none;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+}
+
+.button:hover{
+  background-color:#80cdf5;
+  border-color:#52b1e2;
+  text-decoration: none;
+}
+
+
+.reset{ 
+  background-color:#FCAF98;
+  border:1px solid #FB9C7F;
+  color:#FFFFFF;
+  cursor:pointer;
+  font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+  font-size:13px;
+  font-weight:bold;
+  padding:4px;
+  margin-top:5px;
+  margin-left:350px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+}
+
+.reset:hover{
+  background-color:#FDC4B3;
+  border-color:#FB9C7F;
+}
+
+h1{
+  color:#7E94A2;
+  font-size:30px;
+  margin:50px 0 20px;
+}
+
+h2{
+  font-size:18px;
+  margin-bottom:50px;
+}
+
+h1,h2{
+  font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+  text-align:center;
+  font-weight:normal;
+  text-shadow:0 1px 1px #FFFFFF;
+}
+
+a, a:visited {
+  color:#0196e3;
+  text-decoration:none;
+  outline:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+a img{
+  border:none;
+}
+
+hr {
+  border: none 0; 
+  border-top: 1px solid #CCCCCC;
+  height: 1px;
+}
+/* Table Styling */
+
+.table
+{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  margin: 45px;
+  width: 480px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table th
+{
+  padding: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #FFFFFF;
+  background: #58B9EB;
+}
+.table td
+{
+  padding: 8px;
+  background: #EFFAFF;
+  border: 1px solid #fff;
+  color: #666;
+  
+}
+
+.table tbody tr:hover td
+{
+  background: #E8F7FD;
+}
+
+/*Table Styling Ends 2D92C5*/
