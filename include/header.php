@@ -8,7 +8,7 @@
 	<div id="main">
 		<div id="divIncludes" align=center>
 			<a href="/appsec">
-					<img src="../include/home.png" alt="Home Img" style="width:30px;height:30px;vertical-align:middle">
+					<img src="<?php ABS_PATH ?>/appsec/include/home.png" alt="Home Img" style="width:30px;height:30px;vertical-align:middle">
 			</a>
 		</div>
 	</div>

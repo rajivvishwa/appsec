@@ -1,14 +1,11 @@
-<html>
-  <head>
-    <title>Vulnerable Bank - Login</title>
-    <link rel="stylesheet" type="text/css" href="../../styles.css" />
-  </head>
-  <body>
-
 <?php
+	define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+	$title = "Vulnerable Bank - Login";
+	include (ABS_PATH . "/appsec/include/header.php");
+	require_once (ABS_PATH . "/appsec/include/connect.php");
+
     //Login-Logout Operations
     session_start();
-    include "../../connect.php";
 
     if ($_GET["op"] == "login") {
       if (!$_POST["userid"] || !$_POST["password"]) {
@@ -43,34 +40,42 @@
     else {
     //Display Login Page
 ?>
-
-  <h1>Vulnerable Bank</h1>
-  <div id="main">
-    <div id="divContainer" align="center">
-      <p>Login Form</p>
-      <FORM METHOD=POST ACTION="?op=login">
-        <table width="60%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-          <tr>
-            <td width="78">User Id</td>
-            <td width="6">:</td>
-            <td width="294"><input name="userid" type="text" id="userid" value="victim" size=30></td>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td>:</td>
-            <td><input name="password" type="password" id="password" value="tester" size=30></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td><input type="submit" class="button" name="Submit" value="Login"></td>
-          </tr>
-        </table>
-      </form>  
-    </div>
-  </div>
+	<div id="main">
+	
+		<div id="divContainer" align="center">
+			<p>
+				Login Form
+			</p>
+			<FORM METHOD=POST ACTION="?op=login">
+				<table width="60%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+					<tr>
+						<td width="78">User Id</td>
+						<td width="6">:</td>
+						<td width="294">
+						<input name="userid" type="text" id="userid" value="victim" size=30>
+						</td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td>:</td>
+						<td>
+						<input name="password" type="password" id="password" value="tester" size=30>
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>
+						<input type="submit" class="button" name="Submit" value="Login">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
 <?php
-    }
+	}
 ?>
-  </body>
-</html>
+<?php
+include '../include/footer.php';
+?>

@@ -14,9 +14,14 @@
         // User not logged in, redirect to login page
         Header("Location: index.php");
     }
+	
+	define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+	$title = "Vulnerable Bank";
+	include (ABS_PATH . "/appsec/include/header.php");
+	require_once (ABS_PATH . "/appsec/include/connect.php");
 ?>
 
-<html>
+<!--html>
   <head>
     <title>
       Vulnerable Bank
@@ -24,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../styles.css" />
   </head>
   <body>
-    <h1>Vulnerable Bank</h1>
+    <h1>Vulnerable Bank</h1-->
     <div class="logout" align="center">Welcome <b><i><?php echo $_SESSION["valid_user"]; ?></i></b>&nbsp;&nbsp;(<a href=../bank.com/?op=logout><em><font size=2>Logout</font></em></a>)</div><br/>
     <div id="main">
     <div id="divContainer" align="center">
@@ -100,5 +105,6 @@
         </form>
       </div>
     </div>
-  </body>
-</html>
+<?php
+include '../include/footer.php';
+?>

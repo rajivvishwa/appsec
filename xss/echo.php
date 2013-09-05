@@ -1,7 +1,7 @@
 <?php
 header("X-XSS-Protection: 0");
 define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-$title = "XSS Tool";
+$title = "XSS Echo";
 include (ABS_PATH . "/appsec/include/header.php");
 ?>
 <div id="main">
