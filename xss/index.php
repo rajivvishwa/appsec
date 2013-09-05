@@ -1,26 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.0 Transitional//EN">
 <html>
-<head><title> Execute XSS </title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+<head><title> <?php echo $title = "XSS Tool"; ?></title>
+  <link rel="stylesheet" type="text/css" href="../include/styles.css" />
 </head>
   <body>
     <script type="text/javascript">
-      //<![CDATA[
-      function toggle(o)
-      {
-          var e = document.getElementById(o);
-          e.style.display = (e.style.display == 'none') ? 'block' : 'none';
-      }
-  //]]>
+		//<![CDATA[
+		function toggle(o) {
+			var e = document.getElementById(o);
+			e.style.display = (e.style.display == 'none') ? 'block' : 'none';
+		}
 
-        if(typeof(Storage)!=="undefined"){
-            localStorage.localKey="localValue";
-            sessionStorage.sessionKey="sessionValue";
-        }
+		//]]>
+
+		if ( typeof (Storage) !== "undefined") {
+			localStorage.localKey = "localValue";
+			sessionStorage.sessionKey = "sessionValue";
+		}
     </script>
-    
     <div id="main">
-    <h1>XSS Tool</h1>
+    <?php
+	define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+	include (ABS_PATH . "/appsec/include/header.php");
+    ?>
+    
     <div id="divContainer" align=center>
       <FORM METHOD=POST ACTION="echo.php">
       <table width="80%" border="0" cellpadding="3" cellspacing="3" bgcolor="#FFFFFF">
@@ -145,7 +148,10 @@
       <h3>Execute XSS (GET)</h3>
       <a href="echo.php?userid=<script>alert(document.cookie.concat('\nXSS Found in GET'))</script>">Execute</a>
     </div>
-  
+   <?php
+		include '../include/footer.php';
+ ?>
   </div>
+ 
 </body>
 </html>

@@ -10,3 +10,4 @@ login/connect.php
 .settings/com.aptana.editor.php.prefs
 
 xss/log.txt
+include/connect.php
