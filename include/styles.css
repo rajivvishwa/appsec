@@ -411,3 +411,10 @@ label span.error{
   border-color:#FB9C7F;
   font-weight:bold;
 }
+/* used in CORS */
+.data{
+	font-family: 'Courier New';
+	font-size: 0.8em;
+	color: #6633ff;
+}
+/* End CORS */
