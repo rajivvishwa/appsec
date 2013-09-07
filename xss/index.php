@@ -166,6 +166,6 @@ include (ABS_PATH . "/appsec/include/header.php");
 </div>
 
 <?php
-include '../include/footer.php';
+include (ABS_PATH . "/appsec/include/footer.php");
 ?>
 

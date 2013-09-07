@@ -1,13 +1,11 @@
-<html>
-  <head>
-    <title>Vulnerable Bank - Login</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
-  </head>
-  <body>
+
 
 <?php
-    session_start();
-    include "connect.php";
+ 	define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+	$title = "Login";
+	include (ABS_PATH . "/appsec/include/header.php");
+	require_once (ABS_PATH . "/appsec/include/connect.php");
+	   session_start();
 
     if ($_GET["op"] == "login") {
       if (!$_POST["userid"] || !$_POST["password"]) {
@@ -20,7 +18,7 @@
         ."LIMIT 1";
       
       $r = mysql_query($q);
-      
+	  
       if ( $obj = @mysql_fetch_object($r) ) {
         // Login good, create session variables
         $_SESSION["valid_id"] = $obj->id;
@@ -39,7 +37,6 @@
     else {
 ?>
 
-  <h1>Vulnerable Bank</h1>
   <div id="main">
     <div id="divContainer" align="center">
       <p>Login Form</p>

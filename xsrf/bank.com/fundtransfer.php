@@ -1,4 +1,9 @@
 <?php
+    define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+	$title = "Vulnerable Bank";
+	include (ABS_PATH . "/appsec/include/header.php");
+	require_once (ABS_PATH . "/appsec/include/connect.php");
+    
     session_cache_expire( 20 );
     session_start();
     $inactive = 1200;
@@ -16,14 +21,7 @@
     }
 ?>
 
-<html>
-  <head>
-    <title>
-      Fundtransfer
-    </title>
-    <link rel="stylesheet" type="text/css" href="../../styles.css" />
-  </head>
-  <body>
+
     <script type="text/javascript">
     //<![CDATA[
         function toggle(o){
@@ -32,7 +30,6 @@
         }
     //]]>
     </script>
-  <h1>Vulnerable Bank</h1>
     <div class="logout" align="center">Welcome <b><i><?php echo $_SESSION["valid_user"]; ?></i></b>&nbsp;&nbsp;(<a href=../bank.com/?op=logout><em><font size=2>Logout</font></em></a>)</div><br/>
     <div id="main">
 
@@ -164,5 +161,6 @@
         
 ?>
     </div>
-  </body>
-</html>
+<?php
+include (ABS_PATH . "/appsec/include/footer.php");
+?>

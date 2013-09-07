@@ -1,11 +1,8 @@
-<HTML>
-	<HEAD>
-		<TITLE> Vulnerable Apps </TITLE>
-		<link rel="stylesheet" type="text/css" href="include/styles.css" />
-	</HEAD>
-
-	<BODY>
-		<h1>Vulnerble Apps Index</h1>
+<?php
+	define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
+	$title = "Vulnerable Bank - Login";
+	include (ABS_PATH . "/appsec/include/header.php");
+?>
 		<div id="main">
 			<div id="divContainer" align="center">
 				<p>
@@ -42,7 +39,7 @@
 				<a href="html5/iframe/">Demo (<a href="/html5/iframe/index.php?sandbox">sandbox</a>)
 				<BR>
 			</div>
-			<?php include 'include/footer.php'; ?>
+			<?php include (ABS_PATH . "/appsec/include/footer.php"); ?>
 		</div>
 	</BODY>
 </HTML>

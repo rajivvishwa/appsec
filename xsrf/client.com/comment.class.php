@@ -38,14 +38,14 @@ class Comment
     $d['dt'] = strtotime($d['dt']);
     
     // Needed for the default gravatar image:
-    $url = 'http://'.dirname($_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/img/default_avatar.gif';
+    $url = 'http://'.dirname($_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/client.com/img/default_avatar.gif';
     
     return '
     
       <div class="comment">
         <div class="avatar">
           '.$link_open.'
-          <img src="'.$url.'" />
+          <!--img src="'.$url.'" /-->
           '.$link_close.'
         </div>
         
